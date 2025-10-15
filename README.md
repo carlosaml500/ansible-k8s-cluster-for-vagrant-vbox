@@ -50,3 +50,6 @@ ansible-k8s-cluster/
 - ansible-playbook -i inventory/inventory.ini playbooks/master_config.yml
 - ansible-playbook -i inventory/inventory.ini playbooks/cni_plugin.yml
 - ansible-playbook -i inventory/inventory.ini playbooks/worker_plugin.yml
+
+  ## OR
+- ansible-playbook -i inventory/inventory.ini playbooks/site.yml
