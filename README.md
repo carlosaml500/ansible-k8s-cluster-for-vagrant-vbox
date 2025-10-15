@@ -15,6 +15,8 @@ ansible-k8s-cluster/
 
 ├── playbooks/
 
+├── roles
+
 │ ├── common_config.yml # Common setup for all nodes
 
 │ ├── masters_config.yml # Kubernetes master setup
@@ -22,6 +24,12 @@ ansible-k8s-cluster/
 │ └── workers_config.yml # Kubernetes worker setup
 
 │ └── cni_plugin.yml # Calico setup
+
+│ └── ansible_sudo.yml
+
+│ └── haproxy.yml
+
+│ └── site.yml
 
 ├── README.md
 
