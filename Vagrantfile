@@ -64,9 +64,9 @@ Vagrant.configure("2") do |config|
         SHELL
 
         haproxy.vm.provision :ansible_local do |ansible|
-            ansible.playbook = "/vagrant/ansible-k8s-cluster/playbooks/site.yml"
+            ansible.playbook = "/vagrant/playbooks/site.yml"
             ansible.compatibility_mode = "2.0"
-            ansible.inventory_path = "/vagrant/ansible-k8s-cluster/inventory/inventory.ini"
+            ansible.inventory_path = "/vagrant/inventory/inventory.ini"
             ansible.limit = "all"
         end
 
