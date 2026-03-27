@@ -22,21 +22,21 @@ What I changed in this branch so far:
 
 summary instructions:
 
-install vagrant
-install vagrant ansible_local plugin if you cant have ansible in your host, else edit vagrantfie to replace ansible_local by ansible
-have Virtualbox installed (if other hypervisor you can try editing vagrantfile to use provider for your hypervisor/cloud)
-edit vagrantfile for # of masters and workers/nodes and their cpu/mem specs
+  - install vagrant
+  - install vagrant ansible_local plugin if you cant have ansible in your host, else edit vagrantfie to replace ansible_local by ansible
+  - have Virtualbox installed (if other hypervisor you can try editing vagrantfile to use provider for your hypervisor/cloud)
+  - edit vagrantfile for # of masters and workers/nodes and their cpu/mem specs
   - default:
     - 3 masters w/ 6 vcpu and 2GB ram
     - 4 nodes w/ 6 vcpu and 2GB ram
     - each has 1 default NAT interface and 1 private network interface
     - if you want more masters and/or more workers you must add them to inventory, keeping the sequence on the last octet IP (i.e. 101, 102, 103...)
     - no problem if you have less masters/workers, ignore ansible errors on the excedding ansible inventory entries) . If you want more, edit inventory and add them.
-clone this to dir
-cd to dir
-vagrant up
-  - creates machines as specified in vagrant file and executes ansible playbooks
-  - after execution it takes a while to the cluster to stabilize, log into master1 and monitor with kubectl get/describe node
+  - clone this to dir
+  - cd to dir
+  - vagrant up
+    - creates machines as specified in vagrant file and executes ansible playbooks
+    - after execution it takes a while to the cluster to stabilize, log into master1 and monitor with kubectl get/describe node
 
 
 links (and thanks) to original project: 
