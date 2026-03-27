@@ -5,9 +5,9 @@
          dest: "{{item.dest}}"
          mode: 
        loop:
-         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.30.2/manifests/operator-crds.yaml", dest: "/tmp/operator-crds.yaml"}
-         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.30.2/manifests/tigera-operator.yaml", dest: "/tmp/tigera-operator.yaml"}
-         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.30.2/manifests/custom-resources.yaml", dest: "/tmp/custom-resources.yaml"}
+         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.31.4/manifests/operator-crds.yaml", dest: "/tmp/operator-crds.yaml"}
+         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.31.4/manifests/tigera-operator.yaml", dest: "/tmp/tigera-operator.yaml"}
+         - {url: "https://raw.githubusercontent.com/projectcalico/calico/v3.31.4/manifests/custom-resources.yaml", dest: "/tmp/custom-resources.yaml"}
 
      - name: Update in custom resource file
        replace:
@@ -17,8 +17,8 @@
 
      - name: Apply cni yamls
        shell: |
-         kubectl apply -f /tmp/operator-crds.yaml
-         kubectl apply -f /tmp/tigera-operator.yaml
-         kubectl apply -f /tmp/custom-resources.yaml
+         kubectl create -f /tmp/operator-crds.yaml
+         kubectl create -f /tmp/tigera-operator.yaml
+         kubectl create -f /tmp/custom-resources.yaml
 
 
