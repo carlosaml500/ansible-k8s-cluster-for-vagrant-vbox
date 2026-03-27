@@ -10,7 +10,7 @@ What I changed in this branch so far:
   - image used: "bento/ubuntu-24.04" # (Noble Numbat) 
   - to point cluster to private network - it defaults to NAT because route ;/ - I added --apiserver-advertise-address "{{ ansible_host }}" on control plane init/join commands 
   - changed CNI/calico version to working v3.31.4 on cni role 
-  - changed IP addresses for hosts on inventory so I can dynamically create up to 3 masters and 4 workes (you want more you must edit inventory) 
+  - changed IP addresses for hosts on inventory so I can dynamically create up to 3 masters and 4 workers (you want more you must edit inventory) 
 
 summary instructions:
 
