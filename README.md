@@ -31,9 +31,9 @@ vagrant up
   - after execution it takes a while to the cluster to stabilize, log into master1 and monitor with kubectl get/describe node
 
 
-links (and thanks) to original project:
-https://medium.com/@yagya.sharma14/deploying-a-highly-available-kubernetes-cluster-using-ansible-f98b4fe8c142
-https://github.com/yagyash/ansible-k8s-cluster
+links (and thanks) to original project: 
+  - https://medium.com/@yagya.sharma14/deploying-a-highly-available-kubernetes-cluster-using-ansible-f98b4fe8c142
+  - https://github.com/yagyash/ansible-k8s-cluster
 
 
 BELOW FOLLOWS THE ORIGINAL README OF THE PROJECT
