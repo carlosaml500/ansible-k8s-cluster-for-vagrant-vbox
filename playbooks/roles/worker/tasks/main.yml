@@ -3,7 +3,7 @@
        command: "{{ hostvars[groups['masters'][0]].worker_join_cmd }}"
        args:
          creates: /etc/kubernetes/kubelet.conf
-       when: hostvars[groups['masters'][0]].join_cmd is defined
+       when: hostvars[groups['masters'][0]].worker_join_cmd is defined
   
             
 
