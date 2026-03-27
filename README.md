@@ -1,3 +1,6 @@
+IGNORE, DOCS ARE WIP . PLEASE BE PATIENT
+
+
 # 🚀 Kubernetes Cluster Deployment with Ansible
 
 This project automates the deployment of a **Kubernetes cluster** using **Ansible**.  
