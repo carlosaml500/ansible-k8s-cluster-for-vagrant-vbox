@@ -17,6 +17,6 @@
     - name: Ensure HAProxy is enabled and running
       systemd:
         name: haproxy
-        state: started
+        state: restarted
         enabled: yes
 
