@@ -1,5 +1,13 @@
 
-VERY SHORT SUMMARY:
+VERY SHORT SUMMARY
+This is a fork of https://github.com/yagyash/ansible-k8s-cluster aimed to fully automate a build 
+of a lab environment with 1-n control nodes and 1-n worker nodes and an haproxy node, 
+producing a full highly availabe and production-like kubernetes cluster
+Like this (credit for image : yagash)
+
+<img width="629" height="468" alt="image" src="https://github.com/user-attachments/assets/08c04ed7-c6ea-415d-b98a-4d8aa37936f2" />
+
+
 
 Note: this version runs in windows that's why I am using ansible_local plugin, as windows does not have ansible available. 
 If you have ansible in your host you shoud edit vagrant file replacing ansible_local by ansible.
@@ -36,54 +44,5 @@ links (and thanks) to original project:
   - https://github.com/yagyash/ansible-k8s-cluster
 
 
-BELOW FOLLOWS THE ORIGINAL README OF THE PROJECT
----
 
-## 📂 Project Structure
 
-ansible-k8s-cluster/
-
-├── inventory/
-
-│ └── inventory.ini # Hosts file (masters & workers)
-
-├── playbooks/
-
-├── roles
-
-│ ├── common_config.yml # Common setup for all nodes
-
-│ ├── masters_config.yml # Kubernetes master setup
-
-│ └── workers_config.yml # Kubernetes worker setup
-
-│ └── cni_plugin.yml # Calico setup
-
-│ └── ansible_sudo.yml
-
-│ └── haproxy.yml
-
-│ └── site.yml
-
-├── README.md
-
-└── .gitignore
-
----
-
-## ⚙️ Requirements
-
-- Ubuntu 24.04 / 24.04 servers (or compatible Linux)
-- At least **2 CPUs & 2GB RAM per node**
-- SSH access with `sudo` privileges
-- Python 3 + Ansible installed on another server or on controlplane
-
-  ## For Deployment.
-
-- ansible-playbook -i inventory/inventory.ini playbooks/common_config.yml
-- ansible-playbook -i inventory/inventory.ini playbooks/master_config.yml
-- ansible-playbook -i inventory/inventory.ini playbooks/cni_plugin.yml
-- ansible-playbook -i inventory/inventory.ini playbooks/worker_plugin.yml
-
-  ## OR
-- ansible-playbook -i inventory/inventory.ini playbooks/site.yml
