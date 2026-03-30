@@ -22,9 +22,10 @@ What I changed in this branch so far:
 
 summary instructions:
 
-  - install vagrant
-  - install vagrant ansible_local plugin if you cant have ansible in your host, else edit vagrantfie to replace ansible_local by ansible
-  - have Virtualbox installed (if other hypervisor you can try editing vagrantfile to use provider for your hypervisor/cloud)
+  - [install vagrant](https://www.vagrantup.com/downloads.html)
+  - Then install the following vagrant plugin via PowerShell: 
+        vagrant plugin install vagrant-guest_ansibleible
+  - [Install the Latest Version of Virtualbox and Virtual Box Extension Pack](https://www.virtualbox.org/wiki/Downloads)
   - edit vagrantfile for # of masters and workers/nodes and their cpu/mem specs
   - default:
     - 3 masters w/ 6 vcpu and 2GB ram
@@ -34,7 +35,8 @@ summary instructions:
     - no problem if you have less masters/workers, ignore ansible errors on the excedding ansible inventory entries) . If you want more, edit inventory and add them.
   - clone this to dir
   - cd to dir
-  - vagrant up
+  - to create the environment, go to the project directory and start the build with:
+      vagrant up
     - creates machines as specified in vagrant file and executes ansible playbooks
     - after execution it takes a while to the cluster to stabilize, log into master1 and monitor with kubectl get/describe node
 
