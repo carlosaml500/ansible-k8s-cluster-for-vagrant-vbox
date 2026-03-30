@@ -3,7 +3,7 @@
 This is a fork of https://github.com/yagyash/ansible-k8s-cluster aimed to fully automate a build 
 of a lab environment with 1-n control nodes and 1-n worker nodes and an haproxy node, 
 producing a full highly available and production-like kubernetes cluster
-Like this (credit for image : yagash)
+Like this (credit for image : yagyash)
 
 <img width="629" height="468" alt="image" src="https://github.com/user-attachments/assets/08c04ed7-c6ea-415d-b98a-4d8aa37936f2" />
 
