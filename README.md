@@ -24,7 +24,7 @@ summary instructions:
 
   - [install vagrant](https://www.vagrantup.com/downloads.html)
   - Then install the following vagrant plugin via PowerShell: 
-        vagrant plugin install vagrant-guest_ansibleible
+      vagrant plugin install vagrant-guest_ansible
   - [Install the Latest Version of Virtualbox and Virtual Box Extension Pack](https://www.virtualbox.org/wiki/Downloads)
   - edit vagrantfile for # of masters and workers/nodes and their cpu/mem specs
   - default:
