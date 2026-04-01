@@ -1,5 +1,5 @@
-#BOX_NAME = "bento/ubuntu-24.04" # (Noble Numbat)
-BOX_NAME = "ubuntu-24.04-amd64-vdi" # (Noble Numbat)
+BOX_NAME = "bento/ubuntu-24.04" # (Noble Numbat)
+
  
 MASTER_CPU = 6
 MASTER_MEM = 2048
@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
                 v.customize ["closemedium", vmbasedir + machinename + "\\" + basedisk, "--delete"]
                 v.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "on"]
             end
-            # master.vm.provision "shell", reboot: true, inline: <<-SHELL
-            #     sudo apt-get update -y && sudo apt-get upgrade -y
-            # SHELL
+            master.vm.provision "shell", reboot: true, inline: <<-SHELL
+                sudo apt-get update -y && sudo apt-get upgrade -y
+            SHELL
         end
     end
     i = 0
@@ -58,9 +58,9 @@ Vagrant.configure("2") do |config|
                 v.customize ["closemedium", vmbasedir + machinename + "\\" + basedisk, "--delete"]
                 v.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "on"]
             end
-            # node.vm.provision "shell", reboot: true, inline: <<-SHELL
-            #     sudo apt-get update -y && sudo apt-get upgrade -y
-            # SHELL
+            node.vm.provision "shell", reboot: true, inline: <<-SHELL
+                sudo apt-get update -y && sudo apt-get upgrade -y
+            SHELL
          end
     end
     i = 0
@@ -77,9 +77,9 @@ Vagrant.configure("2") do |config|
             v.name = machinename
             v.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "on"]
         end
-        # haproxy.vm.provision "shell", reboot: true,inline: <<-SHELL
-        #     sudo apt-get update -y && sudo apt-get upgrade -y
-        # SHELL
+        haproxy.vm.provision "shell", reboot: true,inline: <<-SHELL
+            sudo apt-get update -y && sudo apt-get upgrade -y
+        SHELL
 
         haproxy.vm.provision :ansible_local do |ansible|
             ansible.playbook = "/vagrant/playbooks/site.yml"
