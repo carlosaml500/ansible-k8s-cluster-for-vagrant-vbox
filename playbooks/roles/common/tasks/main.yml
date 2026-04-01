@@ -41,6 +41,7 @@
         sysctl --system
 
     - name: Install containerd
+      throttle: 1
       package:
         name: containerd
         state: present
@@ -58,6 +59,7 @@
         enabled: yes
 
     - name: Install kubernetes package
+      throttle: 1
       shell: |
         apt-get install -y apt-transport-https ca-certificates curl gpg
         touch /etc/apt/keyrings/kubernetes-apt-keyring.gpg

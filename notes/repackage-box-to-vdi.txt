@@ -1,0 +1,13 @@
+Phase 1: import box from ovf
+
+C:\Users\username\.vagrant.d\boxes\bento-VAGRANTSLASH-ubuntu-24.04\202510.26.0\amd64\virtualbox\box.ovf
+
+Phase 2: repackage vm to vagrant box using vagrant:
+
+vagrant package --base "ubuntu-24.04-amd64" --output ubuntu-24.04-amd64-vdi.box
+
+Phase 3: make box available for use in vagrant file
+
+vagrant box add ubuntu-24.04-amd64-vdi ubuntu-24.04-amd64-vdi.box
+
+Phase 4: refer box ubuntu-24.04-amd64-vdi on vagrantfile

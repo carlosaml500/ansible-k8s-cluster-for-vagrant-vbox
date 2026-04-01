@@ -1,0 +1,29 @@
+
+healthy calico
+
+root@master1:~# kubectl get pods -o wide -n calico-system
+NAME                                      READY   STATUS    RESTARTS       AGE     IP               NODE      NOMINATED NODE   READINESS GATES
+calico-apiserver-5d489b8bc4-82fmw         1/1     Running   9 (75m ago)    4d14h   10.240.180.15    master2   <none>           <none>
+calico-apiserver-5d489b8bc4-gk4rv         1/1     Running   14 (76m ago)   4d      10.240.137.93    master1   <none>           <none>
+calico-kube-controllers-58c7f44d6-7mznv   1/1     Running   10 (34m ago)   4d      10.240.137.94    master1   <none>           <none>
+calico-node-2wt2d                         1/1     Running   0              12m     192.168.85.101   master1   <none>           <none>
+calico-node-59qx9                         1/1     Running   0              21m     192.168.85.103   master3   <none>           <none>
+calico-node-7zkf2                         1/1     Running   0              5m32s   192.168.85.204   worker4   <none>           <none>
+calico-node-bdx6r                         1/1     Running   0              26m     192.168.85.102   master2   <none>           <none>
+calico-node-qc6xb                         1/1     Running   0              9m35s   192.168.85.202   worker2   <none>           <none>
+calico-node-r8zb8                         1/1     Running   0              8m11s   192.168.85.203   worker3   <none>           <none>
+calico-node-xdqs6                         1/1     Running   0              11m     192.168.85.201   worker1   <none>           <none>
+calico-typha-5cc974b468-dlr97             1/1     Running   0              17m     192.168.85.102   master2   <none>           <none>
+calico-typha-5cc974b468-gtnmj             1/1     Running   0              19m     192.168.85.103   master3   <none>           <none>
+calico-typha-5cc974b468-hsgxl             1/1     Running   0              9m26s   192.168.85.202   worker2   <none>           <none>
+csi-node-driver-5dqws                     2/2     Running   0              11m     10.240.235.128   worker1   <none>           <none>
+csi-node-driver-5ffb5                     2/2     Running   9 (76m ago)    4d14h   10.240.136.8     master3   <none>           <none>
+csi-node-driver-9rg8z                     2/2     Running   10 (76m ago)   4d14h   10.240.137.98    master1   <none>           <none>
+csi-node-driver-f2kpl                     2/2     Running   0              5m31s   10.240.199.128   worker4   <none>           <none>
+csi-node-driver-gzrm6                     2/2     Running   0              9m35s   10.240.189.64    worker2   <none>           <none>
+csi-node-driver-tcnwc                     2/2     Running   9 (75m ago)    4d14h   10.240.180.16    master2   <none>           <none>
+csi-node-driver-zgqhm                     2/2     Running   0              8m11s   10.240.182.0     worker3   <none>           <none>
+goldmane-58f96f7c58-6hnwl                 1/1     Running   4 (76m ago)    4d      10.240.137.95    master1   <none>           <none>
+whisker-5c57794ccf-btbsv                  2/2     Running   8 (76m ago)    4d      10.240.137.99    master1   <none>           <none>
+
+

@@ -1,0 +1,3 @@
+on master: kubectl drain nodename --ignore-daemonset
+on node: kubeadm reset
+on master: kubectl delete node nodename

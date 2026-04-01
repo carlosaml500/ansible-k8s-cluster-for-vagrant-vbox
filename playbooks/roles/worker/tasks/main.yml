@@ -1,5 +1,6 @@
 ---
      - name: Join workers
+       throttle: 1
        command: "{{ hostvars[groups['masters'][0]].worker_join_cmd }}"
        args:
          creates: /etc/kubernetes/kubelet.conf
