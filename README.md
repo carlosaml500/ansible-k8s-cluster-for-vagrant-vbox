@@ -1,4 +1,11 @@
 
+BEWARE OF REQUIREMENTS:
+each master and each worker VM consumes:
+minimum 2GB RAM
+fixed 65GB fixed sized vmdk (SSD REQUIRED!)
+haproxy node consumes:
+minimum 2GB RAM
+about 2-3GB disk (variable size vmdk)
 
 This is a fork of https://github.com/yagyash/ansible-k8s-cluster aimed to fully automate a build 
 of a lab environment with 1-n control nodes and 1-n worker nodes and an haproxy node, 
